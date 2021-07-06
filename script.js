@@ -168,11 +168,17 @@ currentMusic(musicIndex);
 
 function muteMusic() {
   if (audio.muted == false)
+  {
     audio.muted = true;
+    muteBtn.classList.replace("fa-volume-up", "fa-volume-off");
+  }
   else
+  {
     audio.muted = false;
+    muteBtn.classList.replace("fa-volume-off", "fa-volume-up");
+  }
 }
-
+// <i class="fa fa-volume-up" aria-hidden="true"></i>
 function playMusic() {
   isPlaying = true;
   audio.play();
